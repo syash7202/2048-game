@@ -208,6 +208,18 @@ body {
   transform: scale(1.05);
 }
 
+.left-info {
+  animation: fadeIn ease 5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .inputbox {
   position: relative;
   padding: 10px;
@@ -271,7 +283,6 @@ body {
 }
 
 /* ----------------Button-------------------------------- */
-/* === removing default button style ===*/
 .button {
   height: auto;
   background: transparent;
@@ -326,4 +337,17 @@ body {
 .game-avatar {
   max-width: 35vw;
   max-height: 80%;
+  animation: game-avatar-entry 2s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes game-avatar-entry {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

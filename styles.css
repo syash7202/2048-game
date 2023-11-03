@@ -31,6 +31,19 @@ body {
   background: -webkit-linear-gradient(#d6a5a5, #31b8a6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: main-text-entry 0.5s ease-in 0s 1 normal none;
+}
+
+@keyframes main-text-entry {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .hl {
