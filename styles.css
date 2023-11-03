@@ -1,20 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&family=Poppins:wght@300&display=swap");
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: Arial;
+  font-family: "Edu TAS Beginner", cursive;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 /* Game board */
-
 body {
-  background-color: #333;
+  overflow: hidden;
+  background-color: black;
+}
+
+.container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   height: 100vh;
+  width: 90%;
   margin: 0;
   font-size: 7.5vmin;
+}
+
+.game-info {
+  color: white;
+  background: -webkit-linear-gradient(#d6a5a5, #31b8a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hl {
+  height: 10px;
+  border: 0;
+  box-shadow: 0 10px 10px -10px #8c8b8b inset;
+  padding: 20px 10px;
+}
+
+.rule-info {
+  font-size: 0.5em;
+}
+
+.button {
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* button styling */
+.button {
+  margin-top: 30px;
+  --border-right: 6px;
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
+  --animation-color: #1ee6dce0;
+  --fs-size: 0.75em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
 }
 
 #game-board {

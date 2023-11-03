@@ -9,6 +9,20 @@
     <script src="./script.js" type="module"></script>
   </head>
   <body>
-    <div id="game-board"></div>
+    <div class="container">
+      <div class="game-info">
+        <h2 class="main-text">Good Luck,</h2>
+        <h4 class="main-text">name</h4>
+        <div class="hl"></div>
+        <div class="rule-info">Use arrow keys to move.</div>
+        <div class="buttons">
+          <button class="button" data-text="Awesome">
+            <span class="actual-text">&nbsp;EXIT&nbsp;</span>
+            <span aria-hidden="true" class="hover-text">&nbsp;EXIT&nbsp;</span>
+          </button>
+        </div>
+      </div>
+      <div id="game-board"></div>
+    </div>
   </body>
 </html>

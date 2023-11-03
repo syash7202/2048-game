@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&family=Poppins:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Edu TAS Beginner", cursive;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -198,13 +199,14 @@ body {
 }
 
 .left-info h1 {
-  font-size: 8vw;
+  font-size: 6vw;
   transition: color 0.3s, transform 0.3s;
 }
 
 .left-info h1:hover {
-  color: #45f3ff; 
-  transform: scale(1.05); 
+  color: #45f3ff;
+  transform: scale(1.05);
+}
 
 .inputbox {
   position: relative;
@@ -225,6 +227,7 @@ body {
   font-size: 1.5em;
   letter-spacing: 0.05em;
   transition: 0.5s;
+  text-align: center;
   z-index: 10;
 }
 
@@ -324,4 +327,3 @@ body {
   max-width: 35vw;
   max-height: 80%;
 }
-
