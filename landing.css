@@ -183,12 +183,9 @@ body {
   color: white;
 }
 
-/* -------------------------------------------------------------- */
-
-/* -------------------------------------------------------------- */
 .hero-section {
   margin: 20px 0;
-  width: 70%;
+  width: 75%;
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -202,194 +199,125 @@ body {
 
 .left-info h1 {
   font-size: 8vw;
+  transition: color 0.3s, transform 0.3s;
 }
 
-.game-tagline {
-  padding: 10px;
-}
+.left-info h1:hover {
+  color: #45f3ff; 
+  transform: scale(1.05); 
 
-.buttons {
-  display: flex;
-  top: 20px;
-  left: 20px;
-}
-
-.buttons button {
-  width: 150px;
-  height: 50px;
-  background-color: orange;
-  margin: 20px;
-  color: #054964;
+.inputbox {
   position: relative;
-  font-size: 14px;
-  letter-spacing: 1px;
-  font-weight: 500;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 3px;
+  padding: 10px;
+  margin: 20px inherit;
+  width: 196px;
 }
 
-.buttons button:before,
-.buttons button:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background-color: #c81919;
-  transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
-}
-
-.buttons button:before {
-  right: 0;
-  top: 0;
-  transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
-}
-
-.buttons button:after {
-  left: 0;
-  bottom: 0;
-}
-
-.buttons button span {
+.inputbox input {
+  position: relative;
   width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-}
-
-.buttons button span:before,
-.buttons button span:after {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 0;
-  background-color: #c26604;
-  transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
-}
-
-.buttons button span:before {
-  right: 0;
-  top: 0;
-  transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
-}
-
-.buttons button span:after {
-  left: 0;
-  bottom: 0;
-}
-
-.buttons button p {
-  padding: 0;
-  margin: 0;
-  transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.buttons button p:before,
-.buttons button p:after {
-  position: absolute;
-  width: 100%;
-  transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
-  z-index: 1;
-  left: 0;
-}
-
-.buttons button p:before {
-  content: attr(data-title);
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.buttons button p:after {
-  content: attr(data-text);
-  top: 150%;
-  color: #000000;
-}
-
-.buttons button:hover:before,
-.buttons button:hover:after {
-  width: 100%;
-}
-
-.buttons button:hover span {
-  z-index: 1;
-}
-
-.buttons button:hover span:before,
-.buttons button:hover span:after {
-  height: 100%;
-}
-
-.buttons button:hover p:before {
-  top: -50%;
-  transform: rotate(5deg);
-}
-
-.buttons button:hover p:after {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.buttons button.start {
-  background-color: #44d8a4;
-  box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease;
-}
-
-.buttons button.start p:before {
-  top: -50%;
-  transform: rotate(5deg);
-}
-
-.buttons button.start p:after {
-  color: white;
-  transition: all 0s ease;
-  content: attr(data-start);
-  top: 50%;
-  transform: translateY(-50%);
-  animation: start 0.3s ease;
-  animation-fill-mode: forwards;
-}
-
-@keyframes start {
-  from {
-    top: -50%;
-  }
-}
-
-.buttons button.start:hover:before,
-.buttons button.start:hover:after {
-  display: none;
-}
-
-.buttons button.start:hover span {
-  display: none;
-}
-
-.buttons button:active {
+  padding: 20px 10px 10px;
+  background: transparent;
   outline: none;
+  box-shadow: none;
   border: none;
+  color: #23242a;
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
 }
 
-.buttons button:focus {
-  outline: 0;
+.inputbox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  font-size: 1em;
+  font-weight: 500;
+  color: #8f8f8f;
+  letter-spacing: 00.05em;
+  transition: 0.5s;
+  pointer-events: none;
 }
+
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span {
+  color: #45f3ff;
+  transform: translateX(-10px) translateY(-35px);
+  font-size: 0, 95em;
+}
+
+.inputbox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #45f3ff;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+  font-size: 95em;
+  font-weight: 600;
+}
+
+.inputbox input:valid ~ i,
+.inputbox input:focus ~ i {
+  height: 55px;
+}
+
+/* ----------------Button-------------------------------- */
+/* === removing default button style ===*/
+.button {
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* button styling */
+.button {
+  margin-top: 30px;
+  --border-right: 6px;
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
+  --animation-color: #1ee6dce0;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
+}
+
+/* ----------------Button-------------------------------- */
 
 .right-info {
   width: 50%;
   height: auto;
-  padding: 50px;
+  padding: 50px 50px 50px 80px;
 }
 
 .game-avatar {
@@ -397,11 +325,3 @@ body {
   max-height: 80%;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
-}
