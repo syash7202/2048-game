@@ -16,13 +16,59 @@ body {
 }
 
 .developer-heading {
-  text-align: right;
+  text-align: center;
   color: white;
   display: inline-block;
   width: 80vw;
   padding: 20px 20px 0 20px;
   font-family: "Baloo Paaji 2";
-  font-size: 2rem;
+  font-size: 2.5rem;
+  animation: heading-animation 1s cubic-bezier(0.36, 0, 0.66, -0.56) 0s 1 normal
+    none;
+}
+
+@keyframes heading-animation {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: scale(0.7);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: scale(0.84);
+  }
+
+  89% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: scale(0.95);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
 }
 
 .container {
@@ -33,6 +79,52 @@ body {
   width: 70vw;
   background-color: black;
   font-family: "Baloo Paaji 2", cursive;
+  animation: container-animation 1s cubic-bezier(0.36, 0, 0.66, -0.56) 0s 1
+    normal none;
+}
+
+@keyframes container-animation {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateX(250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateX(68px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateX(32px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateX(8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
 }
 
 .card {
