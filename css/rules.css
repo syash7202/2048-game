@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+.rules-section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: white;
+}
+
+p,
+li {
+  color: white;
+  line-height: 1.6;
+}
+
+ol,
+ul {
+  padding-left: 20px;
+}
+
+.rule {
+  padding-top: 23px;
+}
+.rules-container {
+  font-family: "Poppins", sans-serif;
+}
