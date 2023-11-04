@@ -1,6 +1,8 @@
 # Welcome to 2048 Game
 
-Experience the addictive puzzle challenge with our online 2048 game! Built with HTML, CSS, and JavaScript, this web-based version of the classic 2048 game is a fun and challenging way to test your strategic thinking and number-merging skills. Whether you're a newcomer to the 2048 world or a seasoned player, our game offers a seamless and enjoyable gaming experience.
+Experience the addictive puzzle challenge with my online 2048 game! 
+
+Built with HTML, CSS, and JavaScript, this web-based version of the classic 2048 game is a fun and challenging way to test your strategic thinking and number-merging skills. Whether you're a newcomer to the 2048 world or a seasoned player, our game offers a seamless and enjoyable gaming experience.
 
 ![image](https://github.com/syash7202/2048-game/assets/66427456/4b119512-4af9-45a7-bd77-68106a80ac8e)
 
