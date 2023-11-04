@@ -48,7 +48,12 @@
           <i></i>
         </div>
         <div class="buttons">
-          <button id="start-btn" class="button" data-text="Awesome" onclick="mySave()"">
+          <button
+            id="start-btn"
+            class="button"
+            data-text="Awesome"
+            onclick="mySave()"
+          >
             <span class="actual-text">&nbsp;START&nbsp;</span>
             <span aria-hidden="true" class="hover-text"
               >&nbsp;<a
@@ -64,12 +69,11 @@
         <img src="./images/pngegg.png" alt="" class="game-avatar" />
       </div>
     </div>
-    <script> 
-
-    function mySave() {
-      var myContent = document.getElementById("UserName").value;
-      localStorage.setItem("myContent", myContent);
-    }
+    <script>
+      function mySave() {
+        var myContent = document.getElementById("UserName").value;
+        localStorage.setItem("myContent", myContent);
+      }
     </script>
   </body>
 </html>

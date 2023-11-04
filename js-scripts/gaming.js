@@ -6,14 +6,15 @@ function myLoad() {
   console.log(myContent);
   document.getElementById("username").innerText = myContent;
 }
-
 myLoad();
 
-const gameBoard = document.getElementById("game-board");
-const grid = new Grid(gameBoard);
-grid.randomEmptyCell().tile = new Tile(gameBoard);
-grid.randomEmptyCell().tile = new Tile(gameBoard);
-setupInput();
+setTimeout(() => {
+  const gameBoard = document.getElementById("game-board");
+  const grid = new Grid(gameBoard);
+  grid.randomEmptyCell().tile = new Tile(gameBoard);
+  grid.randomEmptyCell().tile = new Tile(gameBoard);
+  setupInput();
+}, 100);
 
 function setupInput() {
   window.addEventListener("keydown", handleInput, { once: true });
