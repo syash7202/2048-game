@@ -26,6 +26,12 @@ body {
   animation: heading-animation 1s cubic-bezier(0.36, 0, 0.66, -0.56) 0s 1 normal
     none;
 }
+.back-btn {
+  position: absolute;
+  top: 2%;
+  right: 90%;
+  font-size: 2.5rem;
+}
 
 @keyframes heading-animation {
   0% {
@@ -129,7 +135,7 @@ body {
 
 .card {
   background-color: #222831;
-  height: 37rem;
+  height: 40rem;
   width: 25%;
   border-radius: 5px;
   display: flex;
@@ -217,6 +223,7 @@ body {
   letter-spacing: 0.05rem;
   margin: 1em;
   width: 14rem;
+  bottom: 2%;
 }
 
 .btn:focus {

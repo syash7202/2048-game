@@ -1,53 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
+
 * {
-  box-sizing: border-box;
-}
-body {
-  font-family: Arial, sans-serif;
-  background: black;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  background-color: black;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
-.container {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 80%;
-  max-width: 800px;
-}
-
-h1 {
-  color: white;
+.developer-heading {
   text-align: center;
-}
-
-.rules-section {
-  margin-bottom: 20px;
-}
-
-h2 {
   color: white;
+  display: inline-block;
+  width: 80vw;
+  padding: 20px 20px 0 20px;
+  font-family: "Baloo Paaji 2";
+  font-size: 2.5rem;
+  animation: heading-animation 1s cubic-bezier(0.36, 0, 0.66, -0.56) 0s 1 normal
+    none;
+}
+.back-btn {
+  position: absolute;
+  top: 2%;
+  right: 90%;
+  font-size: 2.5rem;
 }
 
-p,
-li {
+@keyframes heading-animation {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: scale(0.7);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: scale(0.84);
+  }
+
+  89% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: scale(0.95);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+
+.rule-book {
   color: white;
-  line-height: 1.6;
+  animation: rule-book-animation 1s cubic-bezier(0.36, 0, 0.66, -0.56) 0s 1
+    normal none;
 }
 
-ol,
-ul {
-  padding-left: 20px;
+@keyframes rule-book-animation {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateX(250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateX(68px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateX(32px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateX(8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
 }
 
 .rule {
-  padding-top: 23px;
+  padding: 20px 0;
 }
-.rules-container {
-  font-family: "Poppins", sans-serif;
+
+.rule h2 {
+  font-size: 2.5rem;
+}
+
+.rule h2:hover {
+  color: aqua;
+}
+
+.rule p,
+ol,
+li {
+  font-size: 1.5rem;
 }
