@@ -43,12 +43,12 @@
         <h1 class="main-text">Improve</h1>
         <h1 class="main-text">& Win</h1>
         <div class="inputbox">
-          <input required="required" type="text" />
+          <input required="required" type="text" id="UserName" />
           <span>Username</span>
           <i></i>
         </div>
         <div class="buttons">
-          <button class="button" data-text="Awesome">
+          <button id="start-btn" class="button" data-text="Awesome" onclick="mySave()"">
             <span class="actual-text">&nbsp;START&nbsp;</span>
             <span aria-hidden="true" class="hover-text"
               >&nbsp;<a
@@ -64,5 +64,12 @@
         <img src="./images/pngegg.png" alt="" class="game-avatar" />
       </div>
     </div>
+    <script> 
+
+    function mySave() {
+      var myContent = document.getElementById("UserName").value;
+      localStorage.setItem("myContent", myContent);
+    }
+    </script>
   </body>
 </html>

@@ -1,6 +1,14 @@
 import Grid from "./Grid.js";
 import Tile from "./Tile.js";
 
+function myLoad() {
+  var myContent = localStorage.getItem("myContent");
+  console.log(myContent);
+  document.getElementById("username").innerText = myContent;
+}
+
+myLoad();
+
 const gameBoard = document.getElementById("game-board");
 const grid = new Grid(gameBoard);
 grid.randomEmptyCell().tile = new Tile(gameBoard);
