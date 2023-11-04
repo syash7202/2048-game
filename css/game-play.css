@@ -152,8 +152,8 @@ body {
   top: 0%;
   background: linear-gradient(
     75deg,
-    rgba(59, 101, 109, 0.73) 0%,
-    rgb(11, 3, 45) 100%
+    rgba(2, 4, 4, 0.73) 0%,
+    rgb(17, 16, 20) 100%
   );
   background-size: cover;
   background-position: center;
@@ -190,7 +190,7 @@ body {
 .banner-image {
   background-image: url(../images/2048.jpg);
   background-position: center;
-  background-size: auto;
+  background-size: 20vh;
   height: 30vh;
   width: 30vw;
   border-radius: 12px;
